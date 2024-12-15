@@ -1,0 +1,103 @@
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}
+
+:fullscreen .clock-container {
+  min-height: 100vh;
+}
+
+/* 兼容 webkit 浏览器 */
+:-webkit-full-screen .clock-container {
+  min-height: 100vh;
+}
+
+/* 兼容 Firefox */
+:-moz-full-screen .clock-container {
+  min-height: 100vh;
+}
+
+/* 兼容 IE */
+:-ms-fullscreen .clock-container {
+  min-height: 100vh;
+}
+
+.clock {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.number {
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.1s linear;
+  font-size: 40px;
+  color: #333;
+  white-space: nowrap;
+  margin-left: -8px;
+  margin-top: -14px;
+}
+
+.number.active {
+  color: red;
+  font-weight: bold;
+}
+
+.number.reverse-rotate {
+  transition: transform 0.1s linear;
+}
+
+.colon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #333;
+}
+
+.fullscreen-btn {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.fullscreen-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.clock-container.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 999;
+}

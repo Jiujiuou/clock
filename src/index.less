@@ -1,0 +1,32 @@
+@import url('@/styles/variables.less'); // 加载统一样式变量
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: var(--page-bg);
+}
+
+body {
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}

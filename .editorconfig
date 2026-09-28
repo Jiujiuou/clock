@@ -1,0 +1,19 @@
+# 让编辑器从项目根目录应用本文件规则
+root = true
+
+# 以下设置适用于所有文件
+[*]
+# 文件统一使用 UTF-8 编码
+charset = utf-8
+# 换行符统一为 LF
+end_of_line = lf
+# 保存文件时在末尾保留换行
+insert_final_newline = true
+# 使用空格缩进
+indent_style = space
+# 每级缩进使用两个空格
+indent_size = 2
+
+# Markdown 保留行尾空格，避免影响某些排版语法
+[*.md]
+trim_trailing_whitespace = false

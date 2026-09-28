@@ -1,0 +1,14 @@
+# 忽略 npm 安装生成的依赖目录
+node_modules
+# 忽略 Vite 生产构建产物
+dist
+# 忽略 macOS 文件管理器生成的元数据
+.DS_Store
+# 忽略本机专属配置文件
+*.local
+# 忽略测试覆盖率报告
+coverage
+# 忽略实际环境配置，保留可复制的示例文件
+.env
+.env.*
+!.env.example

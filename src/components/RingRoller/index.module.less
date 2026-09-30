@@ -1,0 +1,35 @@
+.root {
+  position: relative;
+  display: inline-block;
+  // 盒子 = 圆直径 + 一个数字格子，保证数字不被裁切
+  width: calc(var(--radius) * 2 + var(--number-size));
+  height: calc(var(--radius) * 2 + var(--number-size));
+  font-family: 'Cursed Timer ULiL', sans-serif;
+
+  .number {
+    position: absolute;
+    // 圆心左移 radius，使 3 点钟方向的激活数字落在盒子水平中心
+    left: calc(50% - var(--radius));
+    top: 50%;
+    width: var(--number-size);
+    height: var(--number-size);
+    // 负 margin 让数字格子中心对齐到圆心
+    margin-left: calc(var(--number-size) / -2);
+    margin-top: calc(var(--number-size) / -2);
+    font-size: var(--number-size);
+    color: #ccc;
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:
+      transform 1000ms var(--easing, linear),
+      color 1000ms var(--easing, linear),
+      opacity 1000ms var(--easing, linear);
+  }
+
+  .active {
+    color: #aaa;
+    opacity: 1;
+  }
+}

@@ -1,11 +1,61 @@
 .root {
-  width: 100%;
-  height: 100%;
-  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+
+  --number-size: 60px;
+  --radius: 400px;
+
+  .group {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+  }
+
+  // 从左到右层级递减，避免左侧圆环溢出的数字盖住右侧激活数字
+  .group:nth-of-type(1) {
+    z-index: 3;
+  }
+
+  .group:nth-of-type(2) {
+    z-index: 2;
+  }
+
+  .group:nth-of-type(3) {
+    z-index: 1;
+  }
+
+  .roller {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--number-size);
+    height: 100%;
+    overflow: visible;
+  }
+
+  // 十位层级高于个位
+  .group .roller:first-child {
+    z-index: 2;
+  }
+
+  .group .roller:last-child {
+    z-index: 1;
+  }
+
+  .separator {
+    position: relative;
+    z-index: 10;
+    width: var(--number-size);
+    text-align: center;
+    align-self: center;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: var(--number-size);
+    color: #aaa;
+    line-height: 1;
+  }
 }
-
-

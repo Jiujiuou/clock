@@ -9,12 +9,11 @@ import {
   GROUP_GAP,
   NUMBER_SIZE,
   SEPARATOR_COUNT,
+  TENS_2,
+  TENS_5,
+  UNITS,
   VISIBLE_DIGITS,
 } from '@/constants/digit'
-
-const TENS_5 = [0, 1, 2, 3, 4, 5]
-const TENS_2 = [0, 1, 2]
-const UNITS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function VerticalClock() {
   const containerRef = useRef(null)

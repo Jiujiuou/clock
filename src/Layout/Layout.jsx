@@ -57,6 +57,7 @@ function Layout() {
 
   return (
     <div className={styles.root}>
+      {/* <div className={styles.line} /> */}
       <div className={styles.stage} onClick={handleStageClick}>
         {currentClock === CLOCK_TYPE.VERTICAL ? <VerticalClock /> : <HorizonalClock />}
         <button

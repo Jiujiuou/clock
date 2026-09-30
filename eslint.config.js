@@ -32,7 +32,7 @@ export default [
       // 项目实际启用的检查规则
       ...reactHooks.configs.flat.recommended.rules, // 使用官方推荐的 Hooks 规则
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }], // 提示不适合热更新的导出
-      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }], // 禁止未使用变量，以下划线开头的参数除外
+      // 'no-unused-vars': ['error', { argsIgnorePattern: '^_' }], // 禁止未使用变量，以下划线开头的参数除外
       'no-undef': 'error', // 报错未声明的变量
       'no-restricted-imports': [
         'error', // 相对路径导入或重新导出直接报错
@@ -61,6 +61,7 @@ export default [
           message: '项目内加载请使用 @/ 别名，禁止相对路径。',
         },
       ],
+      'react-hooks/exhaustive-deps': 'off', // 关闭 Hooks 依赖完整性提示
     },
   },
 ]

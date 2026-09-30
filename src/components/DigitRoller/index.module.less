@@ -1,0 +1,26 @@
+.root {
+  display: inline-block;
+  align-self: flex-start;
+  transform: translateY(calc(50vh - var(--offset)));
+  transition: transform 1000ms var(--easing, linear);
+  font-family: 'Cursed Timer ULiL', sans-serif;
+
+  .number {
+    width: var(--number-size);
+    height: var(--number-size);
+    font-size: var(--number-size);
+    color: #ccc;
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:
+      color 1000ms var(--easing, linear),
+      opacity 1000ms var(--easing, linear);
+  }
+
+  .active {
+    color: #aaa;
+    opacity: 1;
+  }
+}

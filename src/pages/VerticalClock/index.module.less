@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: var(--group-gap, 48px);
+
+  .group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .separator {
+    align-self: center;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: var(--number-size);
+    color: #aaa;
+    line-height: 1;
+  }
+}

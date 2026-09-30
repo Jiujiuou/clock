@@ -1,0 +1,17 @@
+const NUMBER_SIZE = 60
+const GROUP_GAP = 20
+const VISIBLE_DIGITS = 5
+const GROUP_COUNT = 3
+const DIGIT_COLUMN_COUNT = 6
+const SEPARATOR_COUNT = 2
+const GAP_COUNT = GROUP_COUNT + SEPARATOR_COUNT - 1 // items between groups & separators, minus one gap
+
+export {
+  DIGIT_COLUMN_COUNT,
+  GAP_COUNT,
+  GROUP_COUNT,
+  GROUP_GAP,
+  NUMBER_SIZE,
+  SEPARATOR_COUNT,
+  VISIBLE_DIGITS,
+}

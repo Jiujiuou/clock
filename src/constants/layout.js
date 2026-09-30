@@ -1,0 +1,3 @@
+const IDLE_TIMEOUT = 3000
+
+export { IDLE_TIMEOUT }
